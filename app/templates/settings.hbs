@@ -1,0 +1,29 @@
+{{bob}}
+<div class='row'>
+  <div class='col-md-3'>
+    <table class='table table-bordered table-hover table-striped table-two-pane'>
+      <thead>
+        <th>Name</th>
+      </thead>
+      <tbody>
+      {{#each }}
+      <tr>
+        <td>
+          {{#if isDirty}}
+          {{fa-icon 'fa-refresh fa-spin' }}
+          {{/if}}
+          {{#link-to 'settings.edit' this}}
+          {{name}}
+          {{/link-to}}
+        </td>
+      </tr>
+      {{/each}}
+      </tbody>
+    </table>
+  </div>
+  {{outlet}}
+</div>
+<div>
+  {{pagination-summary meta=meta}}
+</div>
+
