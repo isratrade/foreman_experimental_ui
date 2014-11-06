@@ -3,7 +3,7 @@ import {
   test
 } from 'ember-qunit';
 
-moduleFor('route:settings', 'SettingRoute', {
+moduleFor('route:puppetclasses', 'PuppetClassesRoute', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });

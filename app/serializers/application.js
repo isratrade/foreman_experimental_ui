@@ -8,6 +8,12 @@ export default DS.RESTSerializer.extend({
     wrapped_payload[model_name] = payload['results'];
     return this._super(store, type, wrapped_payload);
   },
+  extractSingle: function(store, type, payload) {
+    var wrapped_payload = {};
+    var model_name = type.toString().split(":")[1];
+    wrapped_payload[model_name] = payload;
+    return this._super(store, type, wrapped_payload);
+  },
   extractMeta: function(store, type, payload) {
     var metaFields = ['total', 'subtotal', 'page', 'per_page','search'];
     var meta_payload = {};

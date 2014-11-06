@@ -1,4 +1,11 @@
 {{bs-alert message="Development area." type="warning" dismiss=false}}
 
+<ul class="list-inline">
+  <li>{{link-to 'Home' 'index'}}</li>
+  <li>{{link-to 'Settings' 'settings'}}</li>
+  <li>{{link-to 'Puppet Classes' 'puppetclasses'}}</li>
+  <li>{{link-to 'Smart Parameters' 'smart-class-parameters'}}</li>
+</ul>
+
 {{outlet}}
 {{bs-progress progress=20 type="info"}}
